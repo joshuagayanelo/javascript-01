@@ -42,6 +42,61 @@ students = [ "Johnny" , "Mary", "Paul" ];
     courses.shift();
 
     console.log(courses);  // The console will show [ "HTML", "Python", "PHP" ]
-
     var students = [ "Peter" , "Joana", "Andrew", "Julio", "Kate", "Marie" ];
     console.log( students.slice(0,3) );
+
+
+
+// ******************************************
+// Lesson 16: Events
+// ******************************************
+
+// document.getElementById("click-me").onclick = function() {
+//     alert("You clicked the button")
+// }
+
+// document.getElementById("hover-me").onmouseover = function() {
+//     alert("You moved the cursor over me")
+// }
+
+// document.getElementById("leave-me").onmouseout = function() {
+//     alert("You moved the cursor out of me")
+// }
+
+// // {/* <button id="click-me">Click here</button>
+// // <button id="hover-me">Move the cursor over here</button>
+// // <button id="leave-me">Move the cursor out of here</button> */}
+
+// document.onkeydown = function(event) {
+//     if(event.keyCode == 65) {
+//         alert("You've just pressed the 'a' key.");
+//     } else {
+//         console.log("You've just pressed a different key.")
+//     }
+// };
+
+// function show_alert() {
+//     alert("You clicked the button.")
+// }
+
+// document.getElementById("color_button").onmouseover = function() {
+//     document.getElementById("color_button").style.backgroundColor = "purple";
+//     document.getElementById("color_button").style.transform = "translateY(-10px)";
+// };
+
+// document.getElementById("color_button").onmouseout = function() {
+//     document.getElementById("color_button").style['background-color'] = "";
+//     document.getElementById("color_button").style.transform = "translateX(0px)";
+// };
+
+// document.getElementById("color_button").onclick = function() {
+//     this.style.backgroundColor = "purple";
+//     this.style.transform = "translateX(60px)";
+// };
+
+var button = document.getElementById("color_button");
+
+button.onmouseover = function() {
+    button.style.backgroundColor = "purple";
+    button.style.transform = "translateX(60px)";
+};
