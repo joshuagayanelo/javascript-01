@@ -19,31 +19,31 @@
 
 //  document.getElementById("user_greeting_message").innerHTML = "Hello " + user_name + "!";
 
-students = [ "Johnny" , "Mary", "Paul" ];
-    console.log(students.length); // The console will show 3
-    console.log(students[0]);  // The console will show "John"
-    console.log(students[0].length)
+// students = [ "Johnny" , "Mary", "Paul" ];
+//     console.log(students.length); // The console will show 3
+//     console.log(students[0]);  // The console will show "John"
+//     console.log(students[0].length)
 
 
-    var courses = [ "HTML", "Python", "PHP" ];
+//     var courses = [ "HTML", "Python", "PHP" ];
 
-    courses.push("Javascript");
+//     courses.push("Javascript");
 
-    console.log(courses);  // The console will show [ "HTML", "Python", "PHP", "Javascript" ]
+//     console.log(courses);  // The console will show [ "HTML", "Python", "PHP", "Javascript" ]
 
-    courses.unshift("Bootstrap");
+//     courses.unshift("Bootstrap");
 
-    console.log(courses);  // The console will show [ "Bootstrap", "HTML", "Python", "PHP", "Javascript" ]
+//     console.log(courses);  // The console will show [ "Bootstrap", "HTML", "Python", "PHP", "Javascript" ]
 
-    courses.pop();
+//     courses.pop();
 
-    console.log(courses);  // The console will show [ "Bootstrap", "HTML", "Python", "PHP" ]
+//     console.log(courses);  // The console will show [ "Bootstrap", "HTML", "Python", "PHP" ]
 
-    courses.shift();
+//     courses.shift();
 
-    console.log(courses);  // The console will show [ "HTML", "Python", "PHP" ]
-    var students = [ "Peter" , "Joana", "Andrew", "Julio", "Kate", "Marie" ];
-    console.log( students.slice(0,3) );
+//     console.log(courses);  // The console will show [ "HTML", "Python", "PHP" ]
+//     var students = [ "Peter" , "Joana", "Andrew", "Julio", "Kate", "Marie" ];
+//     console.log( students.slice(0,3) );
 
 
 
@@ -94,9 +94,82 @@ students = [ "Johnny" , "Mary", "Paul" ];
 //     this.style.transform = "translateX(60px)";
 // };
 
-var button = document.getElementById("color_button");
+// var button = document.getElementById("color_button");
 
-button.onmouseover = function() {
-    button.style.backgroundColor = "purple";
-    button.style.transform = "translateX(60px)";
-};
+// button.onmouseover = function() {
+//     button.style.backgroundColor = "purple";
+//     button.style.transform = "translateX(60px)"; 
+// };
+
+
+// ******************************************
+// Lesson 18: More Get Elements
+// ******************************************
+
+// var elements = document.getElementsByClassName("example");
+// console.log(elements);
+
+// var elements = document.getElementsByTagName("p");
+// console.log(elements);
+
+// ******************************************
+// Lesson 19: While and do/while Loops
+// ******************************************
+
+// var count = 0;
+
+// while(count < 5) {
+//     console.log(count);
+//     count++;
+// }
+
+// var count = 10;
+
+// do {
+//     console.log(count);
+//     count++;
+// } while(count < 5);
+
+// var name = "Hola";
+
+// if (total) {
+//     console.log("I sold something");
+// } else {
+//     console.log("I sold nothing.")
+// }
+
+// console.log(name ? "The name is " + name : "The name is not informed.");
+
+var employees = [
+        
+    {
+        'name': 'Charles Silva',
+        'age': 45,
+        'children': ['Andrew Silva', 'Maria Silva']
+        
+    },
+
+    {
+        'name': 'Elizabeth Green',
+        'age': 32,
+        'children': ['Peter Green']
+        
+    },
+
+    {
+        'name': 'George Banks',
+        'age': 39,
+        'children': ['Philipp Banks', 'Rose Banks', 'Tara Banks']
+        
+    }
+
+];
+
+for (var a = 0; a < employees.length; a++) {
+    var childrenList = employees[a].children;
+
+    for (var b = 0; b < childrenList.length; b++){
+        var child = childrenList[b];
+        console.log(child);
+    }
+}
