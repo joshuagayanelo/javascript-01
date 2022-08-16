@@ -113,63 +113,69 @@
 // console.log(elements);
 
 // ******************************************
-// Lesson 19: While and do/while Loops
+// Lesson 19: For and For/In Loops
 // ******************************************
 
-// var count = 0;
+// for (let a = 0; a < 5; a++) {
+//     console.log(a);
+// };
 
-// while(count < 5) {
-//     console.log(count);
-//     count++;
+// var students = ['Peter', 'Mary', 'Joseph', 'John', 'Charles'];
+
+// for( let a = 0; a < students.length; a++ ) {
+//     console.log(students[a]);
 // }
 
-// var count = 10;
+// var car = {
+//     'Year': 2018,
+//     'Model': 'Evoke',
+//     'Manufacturer': 'Land Rover',
+//     'FuelType': 'Diesel'
 
-// do {
-//     console.log(count);
-//     count++;
-// } while(count < 5);
-
-// var name = "Hola";
-
-// if (total) {
-//     console.log("I sold something");
-// } else {
-//     console.log("I sold nothing.")
 // }
 
-// console.log(name ? "The name is " + name : "The name is not informed.");
+// for (var prop in car) {
+//     console.log( prop + ': ' + car[prop] );
+// }
 
-var employees = [
-        
-    {
-        'name': 'Charles Silva',
-        'age': 45,
-        'children': ['Andrew Silva', 'Maria Silva']
-        
-    },
+// /* ---------USING Object.keys()-------- */
+// const obj = {
+//     name: 'Jean-Luc Picard',
+//     rank: 'Captain'
+//   };
+  
+//   // Prints "name Jean-Luc Picard" followed by "rank Captain"
+//   Object.keys(obj).forEach(key => {
+//     console.log(key, obj[key]);
+//   });
 
-    {
-        'name': 'Elizabeth Green',
-        'age': 32,
-        'children': ['Peter Green']
-        
-    },
+// /* ---------USING Object.values()-------- */
+// const obj = {
+//     name: 'Jean-Luc Picard',
+//     rank: 'Captain'
+//   };
+  
+//   // Prints "Jean-Luc Picard" followed by "Captain"
+//   Object.values(obj).forEach(val => {
+//     console.log(val);
+//   });
 
-    {
-        'name': 'George Banks',
-        'age': 39,
-        'children': ['Philipp Banks', 'Rose Banks', 'Tara Banks']
-        
-    }
+// /* ---------USING Object.entries()-------- */
+// const obj = {
+//     name: 'Jean-Luc Picard',
+//     rank: 'Captain'
+//   };
+  
+//   // Prints "name Jean-Luc Picard" followed by "rank Captain"
+//   Object.entries(obj).forEach(entry => {
+//     const [key, value] = entry;
+//     console.log(key, value);
+//   });
 
-];
 
-for (var a = 0; a < employees.length; a++) {
-    var childrenList = employees[a].children;
+// var elements = document.getElementsByClassName("example");
 
-    for (var b = 0; b < childrenList.length; b++){
-        var child = childrenList[b];
-        console.log(child);
-    }
-}
+// for ( let a = 0; a < elements.length; a++ ) {
+//     elements[a].style.color = "orange";
+//     elements[a].style.fontWeight = "bold";
+// }   
