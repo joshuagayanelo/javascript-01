@@ -178,4 +178,126 @@
 // for ( let a = 0; a < elements.length; a++ ) {
 //     elements[a].style.color = "orange";
 //     elements[a].style.fontWeight = "bold";
-// }   
+// }   star 
+
+// ******************************************
+// Lesson 20: Nested Loops and Conditions
+// ******************************************
+
+// var isMember = false;
+// var age = 12;
+
+// if ( isMember || age >= 65 ) {
+//     console.log('Free');
+// } else {
+//     if ( age < 18 ) {
+//         console.log('$ 6.00')
+//     } else {
+//         console.log( '$ 12.00' )
+//     }
+// }
+
+// var employees = [
+        
+//     {
+//         'name': 'Charles Silva',
+//         'age': 45,
+//         'children': ['Andrew Silva', 'Maria Silva']
+        
+//     },
+
+//     {
+//         'name': 'Elizabeth Green',
+//         'age': 32,
+//         'children': ['Peter Green']
+        
+//     },
+
+//     {
+//         'name': 'George Banks',
+//         'age': 39,
+//         'children': ['Philipp Banks', 'Rose Banks', 'Tara Banks']
+        
+//     }
+
+// ];
+
+// document.getElementById("children").innerHTML = "";
+
+// for ( let a = 0; a < employees.length; a++ ) {
+    
+//     //console.log(employees[a])
+//     let childrenList = employees[a].children;
+//     //console.log(childrenList)
+
+//     for ( let b = 0; b < childrenList.length; b++ ) {
+       
+//         let child = childrenList[b];
+//          //console.log(child)
+//         document.getElementById("children").innerHTML += "<li>" + child + "</li>";
+    
+//     }
+// }
+
+/* ------ forEach Codeblock sample ------ */
+// employees.forEach( a => {
+
+//     let childrenList = a.children;
+//     //console.log(childrenList)
+
+//     childrenList.forEach( b => {
+//         let child = b;
+//         //console.log(b)
+
+//         document.getElementById("children").innerHTML += "<li>" + b + "</li>";
+
+//     } )
+// })
+/* --------------------------------------- */
+
+// ******************************************
+// Lesson 21: Variable Scope
+// ******************************************
+
+// let personsName = 'John'
+
+// function create_name() {
+//     let personsName = 'Mary';
+//     console.log(personsName)
+// }
+
+// create_name();
+
+// let personsName = 'John'
+
+// if(true){
+//     let personsName = 'Mary';
+//     console.log(personsName)
+// }
+
+// console.log(personsName);
+
+// var a = 0;
+
+// if (true) {
+//     let a = 20;
+// }
+
+// console.log(a);
+
+// for ( let a = 0; a < 3; a++ ) {
+//     console.log('Parent loop count:', a)
+
+//     for ( let a = 0; a < 3; a++ ) {
+//         console.log('child loop count:', a)
+//     }
+
+// }
+
+function create_name() {
+    myName = 'Mary';
+    console.log(myName);
+}
+
+create_name();
+console.log(myName);
