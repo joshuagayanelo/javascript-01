@@ -294,10 +294,10 @@
 
 // }
 
-function create_name() {
-    myName = 'Mary';
-    console.log(myName);
-}
+// function create_name() {
+//     myName = 'Mary';
+//     console.log(myName);
+// }
 
-create_name();
-console.log(myName);
+// create_name();
+// console.log(myName);
