@@ -301,3 +301,12 @@
 
 // create_name();
 // console.log(myName);
+
+// ******************************************
+// Lesson 26: Browser Object Model
+// ******************************************
+
+var dataObj = new Date();
+
+// console.log(dataObj.getHours());
+console.log(dataObj);
