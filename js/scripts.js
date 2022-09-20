@@ -305,7 +305,6 @@
 // ******************************************
 // Lesson 26: Browser Object Model
 // ******************************************
-
     // var dateObj = new Date();
 
     // console.log(dateObj.getDay());
@@ -336,3 +335,56 @@
     // let result = orderDateB + leadTimeB // both variables contains the Epoch value
     // let deliveryDateB = new Date(result) // convert to Date by passing the "result" as parameter to the new Date()
     // console.log(deliveryDateB);
+
+    // console.log("Message 1");
+
+    // window.setTimeout(function(){
+    //     console.log("Message 2");
+
+    // },3000);
+
+    
+    // document.getElementById("show-loader").onclick = function() {
+        
+    //     document.getElementById("spinner-loader").style.display = "block";
+        
+    //     window.setTimeout(function(){
+    //         document.getElementById("spinner-loader").style.display = "none";
+
+    //     },2000);
+    // };
+
+    // var count  = 0;
+
+    // var timeInterval = window.setInterval(function(){
+    //     console.log(count);
+    //     count++;
+
+    //     if (count >= 6) {
+    //         window.clearInterval(timeInterval);
+    //     }
+    // },1000);
+
+// ******************************************
+// Clock Challenge
+// ******************************************
+    
+    function add_leading_zero(number){
+        if(number < 10) {
+            return "0" + number.toString();
+        } else {
+            return number.toString();
+        }
+    }
+
+    window.setInterval(function(){
+        let currentTime = new Date();
+        let hours = currentTime.getHours();
+        let minutes = currentTime.getMinutes();
+        let seconds = currentTime.getSeconds();
+       
+        document.getElementById("hours").innerHTML = add_leading_zero(hours);
+        document.getElementById("minutes").innerHTML = add_leading_zero(minutes);
+        document.getElementById("seconds").innerHTML = add_leading_zero(seconds);
+    },1000);
+
