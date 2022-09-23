@@ -369,22 +369,65 @@
 // Clock Challenge
 // ******************************************
     
-    function add_leading_zero(number){
-        if(number < 10) {
-            return "0" + number.toString();
-        } else {
-            return number.toString();
-        }
-    }
+    // function add_leading_zero(number){
+    //     if(number < 10) {
+    //         return "0" + number.toString();
+    //     } else {
+    //         return number.toString();
+    //     }
+    // }
 
-    window.setInterval(function(){
-        let currentTime = new Date();
-        let hours = currentTime.getHours();
-        let minutes = currentTime.getMinutes();
-        let seconds = currentTime.getSeconds();
+    // window.setInterval(function(){
+    //     let currentTime = new Date();
+    //     let hours = currentTime.getHours();
+    //     let minutes = currentTime.getMinutes();
+    //     let seconds = currentTime.getSeconds();
        
-        document.getElementById("hours").innerHTML = add_leading_zero(hours);
-        document.getElementById("minutes").innerHTML = add_leading_zero(minutes);
-        document.getElementById("seconds").innerHTML = add_leading_zero(seconds);
-    },1000);
+    //     document.getElementById("hours").innerHTML = add_leading_zero(hours);
+    //     document.getElementById("minutes").innerHTML = add_leading_zero(minutes);
+    //     document.getElementById("seconds").innerHTML = add_leading_zero(seconds);
+    // },1000);
 
+    
+// ******************************************
+// Lesson 28 - Break & Continue
+// ******************************************
+
+// var x = 0;
+
+// while (x < 10) {
+//     console.log(x);
+//     x++;
+
+//     if (x==5){
+//         break;
+//     }
+// }
+
+// var num = 0;
+
+// while(num < 20) {
+//     num++;
+
+//    if (num % 2 == 0) {
+//     console.log(num);
+//    }
+// }
+
+// ******************************************
+// Lesson 29 - Forms
+// ******************************************
+
+   document.getElementById("show_option").onclick = function() {
+        
+        var selectField = document.getElementById("options");
+        var selectedOption = selectField.options.selectedIndex;
+        var selectedValue = selectField.options[selectedOption];
+        document.getElementById("selected_option").innerHTML = selectedValue.innerHTML;         
+        console.log(selectedValue.innerHTML);
+
+        // var selectedOption = document.getElementById("options").value;
+        // console.log(selectedOption);
+
+    };
+    
